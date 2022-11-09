@@ -23,11 +23,11 @@ const Contact: React.FC<ContactProps> = (props) => {
   return (
     <div
       id="contactSection"
-      className=" h-96 flex flex-row justify-around items-center w-full z-10"
+      className=" sm:h-96 flex flex-col sm:flex-row justify-around items-center w-full z-10 gap-5 mt-4 sm:gap-0 sm:mt-0"
       ref={props.contactRef}
     >
       <article>
-        <h1 className="text-xl4">
+        <h1 className="text-xl1 text-center sm:text-left sm:text-xl4">
           So what are you waiting for?
           <br />
           Let's take your English to the next level!
@@ -37,9 +37,9 @@ const Contact: React.FC<ContactProps> = (props) => {
         <form
           action="https://formsubmit.co/kevinq.to@gmail.com"
           method="POST"
-          className="flex flex-col gap-3 h-fit px-6 pb-6 w-[35rem]"
+          className="flex flex-col gap-3 h-fit px-6 pb-6 w-[25rem] sm:w-[35rem]"
         >
-          <div className="flex flex-row gap-5 justify-between">
+          <div className="flex flex-col sm:flex-row gap-5 justify-between">
             <div className="flex flex-col gap-1">
               <label
                 htmlFor=""
