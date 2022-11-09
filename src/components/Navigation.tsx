@@ -16,9 +16,9 @@ const Navigation: React.FC<NavigationProps> = ({
   contactInView
 }) => {
   return (
-    <nav className="border-solid border-b-[1px] border-slate-200 flex w-full z-10 backdrop-blur-sm fixed">
-      <img src={logo} alt="" className="h-24 px-4 py-4" />
-      <ul className="flex gap-20 w-full justify-end pr-2 py-6 text-xl1 items-center">
+    <nav className="border-solid border-b-[1px] border-slate-200 flex w-screen sm:w-full z-10 backdrop-blur-sm fixed">
+      <img src={logo} alt="" className="h-20 px-4 py-4 hidden sm:block" />
+      <ul className="flex gap-4 sm:gap-20 w-full justify-end pr-2 py-6 items-center">
         <li>
           <Link
             to="top"
@@ -38,7 +38,7 @@ const Navigation: React.FC<NavigationProps> = ({
             to="aboutSection"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-70}
             duration={500}
             className={`hover:text-cyan-700 cursor-pointer transition-all ${
               aboutInView ? 'border-b-4 border-orange-600' : ''
