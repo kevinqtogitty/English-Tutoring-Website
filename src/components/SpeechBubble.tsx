@@ -2,12 +2,12 @@ import React from 'react';
 
 const SpeechBubble = () => {
   return (
-    <div className="w-[600px]">
+    <div className="sm:w-[600px] w-[350px]">
       <div>
-        <blockquote className="bg-slate-100 py-[1rem] pl-[4rem] pr-4 relative border-r-4 rounded-md italic">
+        <blockquote className="bg-green-200 py-[1rem] pl-[4rem] pr-4 relative border-r-4 rounded-md italic text-sm mt-[2rem]">
           <svg
             aria-hidden="true"
-            className="h-8 text-gray-400 dark:text-gray-600 absolute left-5"
+            className="h-4 sm:h-8 text-lime-700 dark:text-gray-600 absolute left-10 sm:left-5 "
             viewBox="0 0 24 27"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const SpeechBubble = () => {
           assumenda ullam reprehenderit.
         </blockquote>
       </div>
-      <p className="mt-6">Aleksandra Zajac</p>
+      <p className="mt-4 ml-5">Aleksandra Zajac</p>
     </div>
   );
 };
