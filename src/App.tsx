@@ -18,7 +18,7 @@ function App() {
     threshold: 0.5
   });
   return (
-    <section className="flex flex-col w-full items-center relative">
+    <section className="flex flex-col w-screen sm:w-full items-center relative">
       <Navigation
         homeInView={homeInView}
         aboutInView={aboutInView}
