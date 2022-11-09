@@ -15,19 +15,21 @@ const Packages: React.FC<PackagesProps> = (props) => {
   return (
     <div
       id="packagesSection"
-      className="h-screen w-[99rem] flex flex-col items-center justify-center gap-8"
+      className="sm:h-screen flex flex-col items-center justify-center gap-8"
       ref={props.packagesRef}
     >
-      <article className="text-xl4 flex flex-col items-center mt-10">
-        <h2 className="text-xl5">Hourly rate & packages</h2>
-        <p className="text-xl1">140 PLN/60mins & 200 PLN/90mins</p>
+      <article className="text-xl3 flex flex-col items-center mt-10">
+        <h2 className="sm:text-xl4">Hourly rate & packages</h2>
+        <p className="text-[1.3rem] sm:text-[1.5rem] sm:text-md">
+          140 PLN/60mins & 200 PLN/90mins
+        </p>
       </article>
-      <div className="flex w-full justify-around">
+      <div className="flex sm:flex-row flex-col w-fit justify-around gap-6 sm:gap-20">
         {data.map((element) => (
           <BundleCard bundle={element} />
         ))}
       </div>
-      <img src={party} alt="" className="h-72" />
+      <img src={party} alt="" className="h-64" />
     </div>
   );
 };
