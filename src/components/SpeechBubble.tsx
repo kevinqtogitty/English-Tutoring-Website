@@ -1,6 +1,12 @@
 import React from 'react';
 
-const SpeechBubble = () => {
+interface ReviewProps {
+  name: string;
+  review: string;
+  company: string;
+}
+
+const SpeechBubble: React.FC<ReviewProps> = ({ name, review, company }) => {
   return (
     <div className="sm:w-[600px] w-[350px]">
       <div>
@@ -17,13 +23,13 @@ const SpeechBubble = () => {
               fill="currentColor"
             />
           </svg>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-          dolores esse. Laborum iste cumque distinctio dolores provident dolore
-          maxime ratione magnam fugiat quos! Eligendi incidunt, nam optio
-          assumenda ullam reprehenderit.
+          {review}
         </blockquote>
       </div>
-      <p className="mt-4 ml-5">Aleksandra Zajac</p>
+      <br />
+      <span className="mt-4 ml-5">
+        {name} - {company}
+      </span>
     </div>
   );
 };

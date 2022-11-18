@@ -9,6 +9,26 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = (props) => {
+  const reviews = [
+    {
+      student: 'Radosław Krzyżanowski',
+      company: 'Siemens Sp. z o.o.',
+      review:
+        'I have many years of experience with many teachers, both Polish and native speakers. With a clear conscience, I must say that Kevins classes are at the highest level I have not experienced before - incredibly engaging great quality, communication transparency, & interesting conversation. The classes bring immediate results - they help you remember vocabulary, improve your fluency, and increase your linguistic confidence. I highly recommend - its worth it!'
+    },
+    {
+      student: 'Karolina Tokarczyk',
+      company: 'Varta',
+      review:
+        'Great teacher and man. He always tries to explain everything in a simple way (with patience) - even if he knows that I totally do not know such words.  Clasess are really interesting and looks more like time spent with a friend, which is awesome. Thanks to him, I stopped being afraid to speak English. Thank you Kevin :)'
+    },
+    {
+      student: 'Tomasz Wenker',
+      company: 'Siemens Sp. z o.o.',
+      review:
+        'Great time with Kevin! To be honest, he’s the best native speaker that I have met, so the recommendion is quite obvious :)'
+    }
+  ];
   return (
     <section
       id="top"
@@ -60,22 +80,22 @@ const Home: React.FC<HomeProps> = (props) => {
       <Carousel
         withIndicators
         slideSize="50%"
-        height={220}
-        slideGap="md"
+        height={230}
+        slideGap="5rem"
         controlsOffset="md"
         controlSize={50}
-        loop
+        loop={true}
         className="absolute bottom-16 sm:bottom-0 w-[80%]"
       >
-        <Carousel.Slide>
-          <SpeechBubble />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <SpeechBubble />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <SpeechBubble />
-        </Carousel.Slide>
+        {reviews.map((review) => (
+          <Carousel.Slide>
+            <SpeechBubble
+              name={review.student}
+              review={review.review}
+              company={review.company}
+            />
+          </Carousel.Slide>
+        ))}
       </Carousel>
     </section>
   );
