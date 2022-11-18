@@ -81,7 +81,7 @@ const Home: React.FC<HomeProps> = (props) => {
         withIndicators
         slideSize="50%"
         height={230}
-        slideGap="5rem"
+        slideGap={80}
         controlsOffset="md"
         controlSize={50}
         loop={true}
